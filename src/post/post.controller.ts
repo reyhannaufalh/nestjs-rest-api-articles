@@ -9,9 +9,9 @@ import {
   Post,
 } from '@nestjs/common';
 import { PostService } from './post.service';
-import { PostResponse, StorePostRequest } from 'src/model/post.model';
-import { WebResponse } from 'src/model/web.model';
-import { Auth } from 'src/common/auth.decorator';
+import { PostResponse, StorePostRequest } from '../model/post.model';
+import { WebResponse } from '../model/web.model';
+import { Auth } from '../common/auth.decorator';
 import { User } from '@prisma/client';
 
 @Controller('api/posts')
