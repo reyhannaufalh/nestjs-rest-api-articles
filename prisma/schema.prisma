@@ -42,7 +42,8 @@ model Post {
   publishedAt DateTime @db.Timestamp
   author      User     @relation(fields: [authorUsername], references: [username])
   authorUsername String
-  categories  PostCategories[]
+  category    PostCategories @relation(fields: [categoryId], references: [id])
+  categoryId  Int
 
   @@map("posts")
 }
